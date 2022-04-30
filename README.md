@@ -6,7 +6,7 @@
  > * [Backend Live](https://appcent-todo-springboot.herokuapp.com/swagger-ui.html#/) 
  > * [Frontend Live](https://appcent-todo-vue.herokuapp.com/)
  > * [Frontend Repo](https://github.com/gazi-dis/Appcent-ToDoCase-Vue3)
- > * **Live enviorment's response status  may be  taken a few seconds. Becasue ı used heroku standart plan this project.**
+ > * **Live environment's response status  may be  taken a few seconds. Becasue ı used heroku standart plan this project.**
  
  ## Swagger
  ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/swagger.png)
