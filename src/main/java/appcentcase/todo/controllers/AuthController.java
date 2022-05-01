@@ -26,7 +26,6 @@ import java.util.Map;
 @RestController
 @RequestMapping("/rest/auth/")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3333")
 public class AuthController {
 
     @Autowired
