@@ -16,6 +16,11 @@ It can be tested with swagger: http://localhost:8080/swagger-ui.html
 
  ## Unit Tests
  ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/unit_tests.png)
+ 
+ ## Frontend Screenshots
+ > ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-Vue3/main/screenshots/main.png)
+ > ----
+ > ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-Vue3/main/screenshots/home.png)
 
 ## License
 
