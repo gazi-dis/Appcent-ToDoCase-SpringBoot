@@ -14,6 +14,10 @@
  ## Endpoints
 It can be tested with swagger: http://localhost:8080/swagger-ui.html
 
+## Important Notes
+> Please change frontend client server adress in all of controllers. 
+> ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/cors_policy.png)
+
  ## Unit Tests
  ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/unit_tests.png)
  
