@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "cd4620f5-64c0-496c-a963-f3fece18ced4",
+		"name": "appcent_todo_case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Abdurrahman Gazi\",\r\n    \"surName\":\"DİŞ\",\r\n    \"userName\":\"gazi\",\r\n    \"email\":\"gazi@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"gazi\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "todos",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTEyNDY2NjUsImlhdCI6MTY1MTIyODY2NX0.mxHk3IDjt3-vOhx2NzA_BH-pmcs22-Xr6vX_6tsTC3cef1x9ZJUg11qILdRHEdhbKOvn2I2CvI3eEtKrVa0QhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":1,\r\n    \"title\":\"Temizlik Yapılacak\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTExNjA2OTYsImlhdCI6MTY1MTE0MjY5Nn0.3Lir1TIAQQa4Xv2oYu_PxMjAzhuextL5PnHLYa7M1KWtwBmM2TqmP2pPtJ4vdsek-dTwGkyJfxb7CPut0_OdsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"userId\":1,\r\n    \"title\":\"Ekmek alınacak\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMzIiwiZXhwIjoxNjUxMzM1ODM2LCJpYXQiOjE2NTEzMTQyMzZ9.8oJEh9l9ZBXCSon6T3n2ew2Qv_-3QQotcMqOi-fDoWjPabaKM7eCSPREhTmTPZCD_WNZZZ7zKn-4NnFv7HVnwQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTodo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTExNjA2OTYsImlhdCI6MTY1MTE0MjY5Nn0.3Lir1TIAQQa4Xv2oYu_PxMjAzhuextL5PnHLYa7M1KWtwBmM2TqmP2pPtJ4vdsek-dTwGkyJfxb7CPut0_OdsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/getById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"getById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "doneChange",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTExNjA2OTYsImlhdCI6MTY1MTE0MjY5Nn0.3Lir1TIAQQa4Xv2oYu_PxMjAzhuextL5PnHLYa7M1KWtwBmM2TqmP2pPtJ4vdsek-dTwGkyJfxb7CPut0_OdsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/doneChange",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"doneChange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTodosByUserId",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTEyNDY2NjUsImlhdCI6MTY1MTIyODY2NX0.mxHk3IDjt3-vOhx2NzA_BH-pmcs22-Xr6vX_6tsTC3cef1x9ZJUg11qILdRHEdhbKOvn2I2CvI3eEtKrVa0QhA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/getAllByUserId?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"getAllByUserId"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllDoneTodosByUserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTExNjA2OTYsImlhdCI6MTY1MTE0MjY5Nn0.3Lir1TIAQQa4Xv2oYu_PxMjAzhuextL5PnHLYa7M1KWtwBmM2TqmP2pPtJ4vdsek-dTwGkyJfxb7CPut0_OdsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/getDoneTodosByUserId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"getDoneTodosByUserId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllNotDoneTodosByUserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJnYXppZGlzMzMiLCJleHAiOjE2NTExNjA2OTYsImlhdCI6MTY1MTE0MjY5Nn0.3Lir1TIAQQa4Xv2oYu_PxMjAzhuextL5PnHLYa7M1KWtwBmM2TqmP2pPtJ4vdsek-dTwGkyJfxb7CPut0_OdsQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rest/todo/getPendingDoneTodosByUserId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rest",
+								"todo",
+								"getPendingDoneTodosByUserId"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
