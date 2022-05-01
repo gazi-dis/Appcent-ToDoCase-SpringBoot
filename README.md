@@ -12,7 +12,8 @@
  ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/swagger.png)
 
  ## Endpoints
-It can be tested with swagger: http://localhost:8080/swagger-ui.html
+> * It can be tested with swagger: http://localhost:8080/swagger-ui.html
+> * Or you can test endpoints with postman. [Postman Collection Link](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/appcent_todo_case.postman_collection.json)
 
 ## Important Notes
 > Please change allowed client server adress in application.properties file. 
