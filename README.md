@@ -15,8 +15,8 @@
 It can be tested with swagger: http://localhost:8080/swagger-ui.html
 
 ## Important Notes
-> Please change frontend client server adress in all of controllers. 
-> ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/cors_policy.png)
+> Please change allowed client server adress in application.properties file. 
+> ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/allowed_client.png)
 
  ## Unit Tests
  ![alt text](https://raw.githubusercontent.com/gazi-dis/Appcent-ToDoCase-SpringBoot/main/screenshots/unit_tests.png)
